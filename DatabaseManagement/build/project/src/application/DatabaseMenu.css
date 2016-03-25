@@ -1,0 +1,17 @@
+#pane {
+    -fx-background-color: #FF7F50;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+.button {
+    -fx-text-fill: black;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-background-color: #DCE0E5;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#welcome-pane{
+     -fx-background-image: url("pokemon.jpg");
+}

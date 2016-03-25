@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.net.*?>
+
+<SplitPane fx:id="splitPane" dividerPositions="0.3512" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+	<items>
+		<Pane id="pane" fx:id="menuPane" prefHeight="398.0" prefWidth="236.0">
+			<children>
+				<Button fx:id="btnInsert" layoutX="42.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleInsertDeleteAction" prefHeight="26.0" prefWidth="92.0" text="Insert" />
+				<Button fx:id="btnDelete" layoutX="42.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleInsertDeleteAction" prefHeight="26.0" prefWidth="92.0" text="Delete" />
+				<Button fx:id="btnDisplayAll" layoutX="42.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleDisplayAllAction" prefHeight="26.0" prefWidth="92.0" text="Display All" />
+				<Button fx:id="btnSearch" layoutX="42.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="26.0" prefWidth="92.0" text="Search" />
+				<Button fx:id="btnUpdate" layoutX="42.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleUpdateAction" prefHeight="26.0" prefWidth="92.0" text="Update" />
+				<Button fx:id="btnCreate" layoutX="32.0" layoutY="262.0" mnemonicParsing="false" onAction="#handleCreateAction" prefHeight="26.0" prefWidth="112.0" text="Create Table" />
+				<Button fx:id="btnDeleteAll" layoutX="32.0" layoutY="301.0" mnemonicParsing="false" onAction="#handleDeleteAllAction" prefHeight="26.0" prefWidth="112.0" text="Delete Table" />
+				<Label fx:id="availableInstruct" layoutX="21.0" layoutY="23.0" prefHeight="23.0" prefWidth="152.0" text="Available Instructions">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</Label>
+				<Button fx:id="btnLogout" layoutX="59.0" layoutY="341.0" mnemonicParsing="false" onAction="#handleLogoutAction" text="Quit" />
+			</children>
+		</Pane>
+		<TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="ALL_TABS">
+			<tabs>
+				<Tab id="welcome-pane" fx:id="tabWelcome" closable="false" text="Welcome">
+					<content>
+						<AnchorPane id="welcome-pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Introduction&#10;The purpose of this program is to enable the user to&#10; interact with an Oracle/MySQL database with the &#10;following functions: insert, delete, display all, &#10;search, update, create table and display table. &#10;&#10;Rules and Regulations for Table Use:&#10;1. You may ONLY use operations on a Table&#10;called pikachuTable.&#10;&#10;2. If you are able to access a DML instruction &#10;and then you choose to DELETE the table&#10;you MUST close all previous tabs.&#10;&#10;3. Enjoy! :D" />
+                     </children>
+						</AnchorPane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</items>
+	<stylesheets>
+		<URL value="@DatabaseMenu.css" />
+	</stylesheets>
+</SplitPane>
